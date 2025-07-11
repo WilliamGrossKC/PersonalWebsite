@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,8 +47,8 @@ function App() {
                   fontSize: '1rem',
                   transition: 'color 0.3s ease'
                 }}
-                onMouseEnter={(e) => e.target.style.color = '#667eea'}
-                onMouseLeave={(e) => e.target.style.color = '#ffffff'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#667eea'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
               >
                 About
               </button>
@@ -62,8 +62,8 @@ function App() {
                   fontSize: '1rem',
                   transition: 'color 0.3s ease'
                 }}
-                onMouseEnter={(e) => e.target.style.color = '#667eea'}
-                onMouseLeave={(e) => e.target.style.color = '#ffffff'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#667eea'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
               >
                 Projects
               </button>
@@ -77,8 +77,8 @@ function App() {
                   fontSize: '1rem',
                   transition: 'color 0.3s ease'
                 }}
-                onMouseEnter={(e) => e.target.style.color = '#667eea'}
-                onMouseLeave={(e) => e.target.style.color = '#ffffff'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#667eea'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
               >
                 Contact
               </button>
@@ -147,12 +147,12 @@ function App() {
               backdropFilter: 'blur(10px)'
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-              e.target.style.transform = 'translateY(-2px)';
+              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              e.target.style.transform = 'translateY(0)';
+              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              (e.target as HTMLElement).style.transform = 'translateY(0)';
             }}
             >
               View My Work
@@ -169,12 +169,12 @@ function App() {
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              e.target.style.transform = 'translateY(-2px)';
+              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = 'transparent';
-              e.target.style.transform = 'translateY(0)';
+              (e.target as HTMLElement).style.backgroundColor = 'transparent';
+              (e.target as HTMLElement).style.transform = 'translateY(0)';
             }}
             >
               Get In Touch
@@ -265,12 +265,12 @@ function App() {
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-10px)';
-                e.target.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+                (e.target as HTMLElement).style.transform = 'translateY(-10px)';
+                (e.target as HTMLElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = 'none';
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
+                (e.target as HTMLElement).style.boxShadow = 'none';
               }}
               >
                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{item.icon}</div>
@@ -353,12 +353,12 @@ function App() {
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-10px)';
-                e.target.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+                (e.target as HTMLElement).style.transform = 'translateY(-10px)';
+                (e.target as HTMLElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = 'none';
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
+                (e.target as HTMLElement).style.boxShadow = 'none';
               }}
               >
                 <div style={{
@@ -415,8 +415,8 @@ function App() {
                   fontSize: '1rem',
                   transition: 'color 0.3s ease'
                 }}
-                onMouseEnter={(e) => e.target.style.color = '#764ba2'}
-                onMouseLeave={(e) => e.target.style.color = '#667eea'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#764ba2'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#667eea'}
                 >
                   View Project →
                 </a>
