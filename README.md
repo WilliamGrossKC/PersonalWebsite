@@ -120,6 +120,3 @@ PersonalWebsite/
 - Phone: (816) 325-0933
 - GitHub: [WilliamGrossKC](https://github.com/WilliamGrossKC)
 - LinkedIn: [William Gross](https://www.linkedin.com/in/william-gross-42ab061a0/)
-
-## 📄 License
-This project is private and proprietary. 
