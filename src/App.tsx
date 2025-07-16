@@ -134,48 +134,52 @@ function App() {
             Passionate about creating impactful digital experiences and building innovative solutions
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={{
-              padding: '1rem 2rem',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: 'white',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '50px',
-              cursor: 'pointer',
-              fontWeight: '500',
-              fontSize: '1rem',
-              transition: 'all 0.3s ease',
-              backdropFilter: 'blur(10px)'
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              (e.target as HTMLElement).style.transform = 'translateY(0)';
-            }}
+            <button 
+              onClick={() => scrollToSection('projects')}
+              style={{
+                padding: '1rem 2rem',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                color: 'white',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                borderRadius: '50px',
+                cursor: 'pointer',
+                fontWeight: '500',
+                fontSize: '1rem',
+                transition: 'all 0.3s ease',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
+              }}
             >
               View My Work
             </button>
-            <button style={{
-              padding: '1rem 2rem',
-              backgroundColor: 'transparent',
-              color: 'white',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '50px',
-              cursor: 'pointer',
-              fontWeight: '500',
-              fontSize: '1rem',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              (e.target as HTMLElement).style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.backgroundColor = 'transparent';
-              (e.target as HTMLElement).style.transform = 'translateY(0)';
-            }}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              style={{
+                padding: '1rem 2rem',
+                backgroundColor: 'transparent',
+                color: 'white',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                borderRadius: '50px',
+                cursor: 'pointer',
+                fontWeight: '500',
+                fontSize: '1rem',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                (e.target as HTMLElement).style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                (e.target as HTMLElement).style.transform = 'translateY(0)';
+              }}
             >
               Get In Touch
             </button>
@@ -518,77 +522,92 @@ function App() {
             <div style={{ 
               display: 'flex', 
               justifyContent: 'center', 
-              gap: '1.5rem' 
+              gap: '2rem',
+              flexWrap: 'wrap'
             }}>
-              <a href="https://github.com/WilliamGrossKC" target="_blank" rel="noopener noreferrer" style={{
-                padding: '1rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-                fontSize: '1.5rem',
-                transition: 'all 0.3s ease',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(-5px)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(0)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              }}
-              >
-                🐙
-              </a>
-              <a href="https://www.linkedin.com/in/william-gross-42ab061a0/" target="_blank" rel="noopener noreferrer" style={{
-                padding: '1rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-                fontSize: '1.5rem',
-                transition: 'all 0.3s ease',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(-5px)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(0)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              }}
-              >
-                💼
-              </a>
-              <a href="mailto:william.gross.prof@gmail.com" style={{
-                padding: '1rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-                fontSize: '1.5rem',
-                transition: 'all 0.3s ease',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(-5px)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.transform = 'translateY(0)';
-                (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-              }}
-              >
-                📧
-              </a>
+              <div style={{ textAlign: 'center' }}>
+                <a href="https://github.com/WilliamGrossKC" target="_blank" rel="noopener noreferrer" style={{
+                  padding: '1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  fontSize: '1.5rem',
+                  transition: 'all 0.3s ease',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  margin: '0 auto 0.5rem auto'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(-5px)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+                >
+                  🐙
+                </a>
+                <span style={{ fontSize: '0.9rem', color: '#cccccc' }}>GitHub</span>
+              </div>
+              
+              <div style={{ textAlign: 'center' }}>
+                <a href="https://www.linkedin.com/in/william-gross-42ab061a0/" target="_blank" rel="noopener noreferrer" style={{
+                  padding: '1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  fontSize: '1.5rem',
+                  transition: 'all 0.3s ease',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  margin: '0 auto 0.5rem auto'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(-5px)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+                >
+                  💼
+                </a>
+                <span style={{ fontSize: '0.9rem', color: '#cccccc' }}>LinkedIn</span>
+              </div>
+              
+              <div style={{ textAlign: 'center' }}>
+                <a href="mailto:william.gross.prof@gmail.com" style={{
+                  padding: '1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none',
+                  fontSize: '1.5rem',
+                  transition: 'all 0.3s ease',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  margin: '0 auto 0.5rem auto'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(-5px)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.transform = 'translateY(0)';
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+                >
+                  📧
+                </a>
+                <span style={{ fontSize: '0.9rem', color: '#cccccc' }}>Email</span>
+              </div>
             </div>
           </div>
         </div>
