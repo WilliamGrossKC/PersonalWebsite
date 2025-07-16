@@ -326,22 +326,25 @@ function App() {
           }}>
             {[
               {
-                title: "E-Commerce Platform",
-                description: "A modern e-commerce solution built with React and Node.js",
-                tech: ["React", "Node.js", "MongoDB"],
-                color: "linear-gradient(135deg, #667eea, #764ba2)"
+                title: "Tailored Tutor RAG",
+                description: "An intelligent tutoring system using OpenAI's API and RAG techniques for personalized learning experiences",
+                tech: ["Python", "Flask", "OpenAI API"],
+                color: "linear-gradient(135deg, #667eea, #764ba2)",
+                link: "https://github.com/WilliamGrossKC/TailoredTutorRag"
               },
               {
-                title: "Task Management App",
-                description: "A collaborative task management application with real-time updates",
-                tech: ["Vue.js", "Firebase", "Tailwind"],
-                color: "linear-gradient(135deg, #f093fb, #f5576c)"
+                title: "Solana Trading Bot",
+                description: "An automated trading bot for Solana blockchain using machine learning algorithms for market analysis",
+                tech: ["Python", "Machine Learning", "Solana"],
+                color: "linear-gradient(135deg, #f093fb, #f5576c)",
+                link: "https://github.com/WilliamGrossKC/SolanaTradingBot"
               },
               {
-                title: "Portfolio Website",
-                description: "A responsive portfolio website with modern animations",
-                tech: ["React", "TypeScript", "Vite"],
-                color: "linear-gradient(135deg, #4facfe, #00f2fe)"
+                title: "WYA",
+                description: "iOS mobile application built with SwiftUI for modern, native iOS development",
+                tech: ["SwiftUI", "iOS", "Swift"],
+                color: "linear-gradient(135deg, #4facfe, #00f2fe)",
+                link: "https://github.com/WilliamGrossKC/WYA"
               }
             ].map((project, index) => (
               <div key={index} style={{
@@ -408,7 +411,7 @@ function App() {
                     </span>
                   ))}
                 </div>
-                <a href="#" style={{
+                <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
                   color: '#667eea',
                   textDecoration: 'none',
                   fontWeight: '500',
