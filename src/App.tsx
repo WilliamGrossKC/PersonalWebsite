@@ -24,6 +24,33 @@ function App() {
 
   const projects = [
     {
+      title: 'FluidSolver (Beta)',
+      description: 'Visual fluid network analysis tool for pressure and flow in pipe systems—inspired by NASA GFSSP. Build complex pipe networks, analyze flow distribution, and visualize pressure drops in real-time.',
+      tech: ['JavaScript', 'Vite', 'CSS', 'Canvas API'],
+      gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+      link: 'https://fluidsolver.app',
+      github: 'https://github.com/WilliamGrossKC/FluidSolver',
+      featured: true,
+      graphic: (
+        <svg viewBox="0 0 140 140" fill="none" style={{ width: '85%', height: '85%', opacity: 0.95 }}>
+          <defs>
+            <linearGradient id="fluid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(255,255,255,0.3)" />
+              <stop offset="100%" stopColor="rgba(255,255,255,0.08)" />
+            </linearGradient>
+          </defs>
+          <rect x="25" y="35" width="24" height="24" rx="4" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+          <rect x="91" y="81" width="24" height="24" rx="4" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+          <circle cx="70" cy="70" r="14" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
+          <circle cx="70" cy="35" r="10" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5"/>
+          <circle cx="45" cy="70" r="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5"/>
+          <circle cx="95" cy="70" r="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5"/>
+          <path d="M37 47 L58 58 M82 58 L103 81 M70 56 L70 84 M56 70 L84 70" stroke="rgba(255,255,255,0.8)" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M48 62 L62 48" stroke="rgba(255,255,255,0.5)" strokeWidth="1" strokeLinecap="round" strokeDasharray="3 2"/>
+        </svg>
+      ),
+    },
+    {
       title: 'Tailored Tutor RAG',
       description: "An intelligent tutoring system using OpenAI's API and RAG techniques for personalized learning experiences.",
       tech: ['Python', 'Flask', 'OpenAI API'],
@@ -95,31 +122,6 @@ function App() {
           <rect x="50" y="102" width="18" height="18" rx="4" fill="rgba(255,255,255,0.25)"/>
           <rect x="72" y="102" width="18" height="18" rx="4" fill="rgba(255,255,255,0.25)"/>
           <circle cx="70" cy="124" r="4" fill="rgba(255,255,255,0.5)"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'FluidSolver (Beta)',
-      description: 'Visual fluid network analysis tool for pressure and flow in pipe systems—inspired by NASA GFSSP.',
-      tech: ['JavaScript', 'Vite', 'CSS'],
-      gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
-      link: 'https://fluidsolver.app',
-      graphic: (
-        <svg viewBox="0 0 140 140" fill="none" style={{ width: '85%', height: '85%', opacity: 0.95 }}>
-          <defs>
-            <linearGradient id="fluid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(255,255,255,0.3)" />
-              <stop offset="100%" stopColor="rgba(255,255,255,0.08)" />
-            </linearGradient>
-          </defs>
-          <rect x="25" y="35" width="24" height="24" rx="4" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
-          <rect x="91" y="81" width="24" height="24" rx="4" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
-          <circle cx="70" cy="70" r="14" fill="url(#fluid-grad)" stroke="rgba(255,255,255,0.9)" strokeWidth="2"/>
-          <circle cx="70" cy="35" r="10" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5"/>
-          <circle cx="45" cy="70" r="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5"/>
-          <circle cx="95" cy="70" r="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5"/>
-          <path d="M37 47 L58 58 M82 58 L103 81 M70 56 L70 84 M56 70 L84 70" stroke="rgba(255,255,255,0.8)" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M48 62 L62 48" stroke="rgba(255,255,255,0.5)" strokeWidth="1" strokeLinecap="round" strokeDasharray="3 2"/>
         </svg>
       ),
     },
@@ -297,46 +299,179 @@ function App() {
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle">Here are some of the projects I've worked on recently.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.75rem', marginTop: '2rem' }}>
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card project-card"
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
-              >
-                <div
-                  style={{
-                    width: '100%',
-                    height: 180,
-                    background: project.gradient,
-                    borderRadius: 16,
-                    marginBottom: '1.25rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    overflow: 'hidden',
-                  }}
+            {projects.map((project, index) => {
+              // Featured project gets special treatment
+              if (project.featured) {
+                return (
+                  <div
+                    key={index}
+                    className="card project-card featured-card"
+                    style={{
+                      gridColumn: '1 / -1',
+                      display: 'grid',
+                      gridTemplateColumns: 'minmax(280px, 1fr) 1.5fr',
+                      gap: '2rem',
+                      padding: '2rem',
+                      position: 'relative',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    {/* Featured badge */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '1.25rem',
+                      right: '1.25rem',
+                      background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+                      color: '#fff',
+                      padding: '0.4rem 0.9rem',
+                      borderRadius: '999px',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      boxShadow: '0 4px 12px rgba(17, 153, 142, 0.4)',
+                    }}>
+                      Featured
+                    </div>
+                    {/* Graphic */}
+                    <div
+                      style={{
+                        width: '100%',
+                        height: 240,
+                        background: project.gradient,
+                        borderRadius: 16,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        overflow: 'hidden',
+                      }}
+                    >
+                      {project.graphic}
+                    </div>
+                    {/* Content */}
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                      <h3 style={{ fontFamily: FONTS.heading, fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '0.75rem' }}>
+                        {project.title}
+                      </h3>
+                      <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.25rem' }}>
+                        {project.description}
+                      </p>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                        {project.tech.map((t, i) => (
+                          <span key={i} className="tech-tag">{t}</span>
+                        ))}
+                      </div>
+                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary"
+                          style={{ textDecoration: 'none', padding: '0.75rem 1.5rem', fontSize: '0.95rem' }}
+                        >
+                          Launch App
+                        </a>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'rgba(255,255,255,0.8)', fontWeight: 500, fontSize: '0.95rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.2s ease' }}
+                          onMouseEnter={(e) => { (e.currentTarget).style.color = '#fff'; }}
+                          onMouseLeave={(e) => { (e.currentTarget).style.color = 'rgba(255,255,255,0.8)'; }}
+                        >
+                          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 20, height: 20 }}>
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                          </svg>
+                          View Source
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              const cardContent = (
+                <>
+                  <div
+                    style={{
+                      width: '100%',
+                      height: 180,
+                      background: project.gradient,
+                      borderRadius: 16,
+                      marginBottom: '1.25rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    {project.graphic}
+                  </div>
+                  <h3 style={{ fontFamily: FONTS.heading, fontSize: '1.35rem', fontWeight: 600, color: '#fff', marginBottom: '0.5rem' }}>
+                    {project.title}
+                  </h3>
+                  <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, fontSize: '0.95rem', marginBottom: '1rem' }}>
+                    {project.description}
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    {project.tech.map((t, i) => (
+                      <span key={i} className="tech-tag">{t}</span>
+                    ))}
+                  </div>
+                </>
+              );
+
+              // If project has both link and github, render as div with two links
+              if (project.github) {
+                return (
+                  <div
+                    key={index}
+                    className="card project-card"
+                    style={{ display: 'block', padding: '1.5rem' }}
+                  >
+                    {cardContent}
+                    <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: '#a78bfa', fontWeight: 500, fontSize: '0.9rem', textDecoration: 'none' }}
+                      >
+                        View App →
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, fontSize: '0.9rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem' }}
+                      >
+                        <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16 }}>
+                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                );
+              }
+
+              // Otherwise render as a single link card
+              return (
+                <a
+                  key={index}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card project-card"
+                  style={{ textDecoration: 'none', color: 'inherit', display: 'block', padding: '1.5rem' }}
                 >
-                  {project.graphic}
-                </div>
-                <h3 style={{ fontFamily: FONTS.heading, fontSize: '1.35rem', fontWeight: 600, color: '#fff', marginBottom: '0.5rem' }}>
-                  {project.title}
-                </h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, fontSize: '0.95rem', marginBottom: '1rem' }}>
-                  {project.description}
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                  {project.tech.map((t, i) => (
-                    <span key={i} className="tech-tag">{t}</span>
-                  ))}
-                </div>
-                <span style={{ display: 'inline-block', marginTop: '1rem', color: '#a78bfa', fontWeight: 500, fontSize: '0.9rem' }}>
-                  View Project →
-                </span>
-              </a>
-            ))}
+                  {cardContent}
+                  <span style={{ display: 'inline-block', marginTop: '1rem', color: '#a78bfa', fontWeight: 500, fontSize: '0.9rem' }}>
+                    View Project →
+                  </span>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -640,6 +775,25 @@ function App() {
         }
         .project-card:hover {
           border-color: rgba(167, 139, 250, 0.2);
+        }
+        .featured-card {
+          background: rgba(17, 153, 142, 0.08);
+          border: 1px solid rgba(56, 239, 125, 0.2);
+          box-shadow: 0 0 60px -12px rgba(17, 153, 142, 0.3), 0 0 100px -20px rgba(56, 239, 125, 0.15);
+          animation: featuredGlow 4s ease-in-out infinite;
+        }
+        .featured-card:hover {
+          border-color: rgba(56, 239, 125, 0.4);
+          box-shadow: 0 0 80px -12px rgba(17, 153, 142, 0.4), 0 0 120px -20px rgba(56, 239, 125, 0.25), 0 24px 48px -12px rgba(0,0,0,0.35);
+        }
+        @keyframes featuredGlow {
+          0%, 100% { box-shadow: 0 0 60px -12px rgba(17, 153, 142, 0.3), 0 0 100px -20px rgba(56, 239, 125, 0.15); }
+          50% { box-shadow: 0 0 80px -12px rgba(17, 153, 142, 0.4), 0 0 120px -20px rgba(56, 239, 125, 0.2); }
+        }
+        @media (max-width: 768px) {
+          .featured-card {
+            grid-template-columns: 1fr !important;
+          }
         }
         .tech-tag {
           padding: 0.35rem 0.75rem;
