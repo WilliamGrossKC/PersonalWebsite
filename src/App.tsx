@@ -103,7 +103,7 @@ function App() {
       description: 'Visual fluid network analysis tool for pressure and flow in pipe systems—inspired by NASA GFSSP.',
       tech: ['JavaScript', 'Vite', 'CSS'],
       gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
-      link: 'https://github.com/WilliamGrossKC/FluidSolver',
+      link: 'https://fluidsolver.app',
       graphic: (
         <svg viewBox="0 0 140 140" fill="none" style={{ width: '85%', height: '85%', opacity: 0.95 }}>
           <defs>
