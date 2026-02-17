@@ -99,7 +99,7 @@ function App() {
       ),
     },
     {
-      title: 'FluidSolver',
+      title: 'FluidSolver (Beta)',
       description: 'Visual fluid network analysis tool for pressure and flow in pipe systems—inspired by NASA GFSSP.',
       tech: ['JavaScript', 'Vite', 'CSS'],
       gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
